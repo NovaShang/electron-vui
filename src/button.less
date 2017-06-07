@@ -1,0 +1,41 @@
+@import "color.less";
+
+.button(@color) {
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid @color;
+    color: @color;
+    font-size: 14px;
+    padding: 4px 10px;
+    margin: 3px;
+    transition:0.2s all;
+    &:hover{
+        color: @color + #111;
+        border-color: @color + #111;
+        box-shadow: 0 0 6px 0 fade(@color - #111,50%), inset 0 0 6px 0 fade(@color - #111,50%);
+    }
+
+    &:active{
+        background-color: fade(@color,30%);
+    }
+}
+
+.button-primary{
+    .button(@primary);
+}
+
+.button-success{
+    .button(@success);
+}
+
+.button-error{
+    .button(@error);
+}
+
+.button-warning{
+    .button(@warning);
+}
+
+.button-default{
+    .button(@default)
+}

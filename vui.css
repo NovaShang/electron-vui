@@ -13,15 +13,17 @@ select,
 summary,
 textarea {
     touch-action: manipulation;
+    background-color: transparent;
+    border: none;
 }
 
 body {
-    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-family: Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #292b2c;
-    background-color: #FFFFFF;
+    background-color: #EEE;
     margin: 0px;
 }
 
@@ -160,20 +162,166 @@ small {
     font-weight: 400;
 }
 
-.button {
+.block-title {
+    margin-top: 20px;
+}
+
+.blue-text {
+    color: #007acc;
+    font-weight: bold;
+}
+
+.button-primary {
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid #3498DB;
+    color: #3498DB;
+    font-size: 14px;
+    padding: 4px 10px;
+    margin: 3px;
+    transition: 0.2s all;
+}
+
+.button-primary:hover {
+    color: #45a9ec;
+    border-color: #45a9ec;
+    box-shadow: 0 0 6px 0 rgba(35, 135, 202, 0.5), inset 0 0 6px 0 rgba(35, 135, 202, 0.5);
+}
+
+.button-primary:active {
+    background-color: rgba(52, 152, 219, 0.3);
+}
+
+.button-success {
     background-color: transparent;
     border-radius: 3px;
     border: 1px solid #2ECC71;
     color: #2ECC71;
-    display: block;
-    font-size: 16px;
-    padding: 6px;
+    font-size: 14px;
+    padding: 4px 10px;
     margin: 3px;
+    transition: 0.2s all;
 }
 
-.button:hover {
-    color: #6EE29F;
-    border-color: #6EE29F;
-    box-shadow: 0 0 6px 0 rgba(46, 204, 113, 0.3), inset 0 0 6px 0 rgba(46, 204, 113, 0.3);
-    text-shadow: 0 0 6px 0 rgba(46, 204, 113, 0.3);
+.button-success:hover {
+    color: #3fdd82;
+    border-color: #3fdd82;
+    box-shadow: 0 0 6px 0 rgba(29, 187, 96, 0.5), inset 0 0 6px 0 rgba(29, 187, 96, 0.5);
+}
+
+.button-success:active {
+    background-color: rgba(46, 204, 113, 0.3);
+}
+
+.button-error {
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid #E74C3C;
+    color: #E74C3C;
+    font-size: 14px;
+    padding: 4px 10px;
+    margin: 3px;
+    transition: 0.2s all;
+}
+
+.button-error:hover {
+    color: #f85d4d;
+    border-color: #f85d4d;
+    box-shadow: 0 0 6px 0 rgba(214, 59, 43, 0.5), inset 0 0 6px 0 rgba(214, 59, 43, 0.5);
+}
+
+.button-error:active {
+    background-color: rgba(231, 76, 60, 0.3);
+}
+
+.button-warning {
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid #E6B222;
+    color: #E6B222;
+    font-size: 14px;
+    padding: 4px 10px;
+    margin: 3px;
+    transition: 0.2s all;
+}
+
+.button-warning:hover {
+    color: #f7c333;
+    border-color: #f7c333;
+    box-shadow: 0 0 6px 0 rgba(213, 161, 17, 0.5), inset 0 0 6px 0 rgba(213, 161, 17, 0.5);
+}
+
+.button-warning:active {
+    background-color: rgba(230, 178, 34, 0.3);
+}
+
+.button-default {
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid #7E7E7E;
+    color: #7E7E7E;
+    font-size: 14px;
+    padding: 4px 10px;
+    margin: 3px;
+    transition: 0.2s all;
+}
+
+.button-default:hover {
+    color: #8f8f8f;
+    border-color: #8f8f8f;
+    box-shadow: 0 0 6px 0 rgba(109, 109, 109, 0.5), inset 0 0 6px 0 rgba(109, 109, 109, 0.5);
+}
+
+.button-default:active {
+    background-color: rgba(126, 126, 126, 0.3);
+}
+
+.model {
+    width: 400px;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 100px;
+    background-color: #222;
+    border: 1px solid rgba(153, 153, 153, 0.5);
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.model>.header {
+    margin-top: 6px;
+    border-left: 3px solid #999;
+    font-size: 16px;
+    color: #999;
+    padding: 0 10px;
+    display: flex;
+}
+
+.model>.header>.title {
+    flex-grow: 1;
+}
+
+.model>.header>.modal-control {
+    transition: 0.2s all;
+}
+
+.model>.header>.modal-control:hover {
+    text-shadow: 0 0 6px 0 rgba(153, 153, 153, 0.5);
+}
+
+.model>.content {
+    color: #FFFFFF;
+    margin: 10px 20px;
+}
+
+.model>.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 10px;
 }

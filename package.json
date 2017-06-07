@@ -1,19 +1,21 @@
 {
-  "name": "electron-vui",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NovaShang/electron-vui.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NovaShang/electron-vui/issues"
-  },
-  "homepage": "https://github.com/NovaShang/electron-vui#readme"
+    "name": "electron-vui",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "demo": "http-server .",
+        "make": "lessc ./src/vui.less vui.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NovaShang/electron-vui.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/NovaShang/electron-vui/issues"
+    },
+    "homepage": "https://github.com/NovaShang/electron-vui#readme"
 }
